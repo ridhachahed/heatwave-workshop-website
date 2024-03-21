@@ -6,12 +6,12 @@ title: Home
     <img src="./images/logo_workshop.png" width="500" alt="Workshop logo">
 </div>
 
-# Automated Machine Learning from Your Database System with MySQL HeatWave Cloud Service
+# Automated Machine Learning from Your Database System with MySQL HeatWave Service
 
 
 Welcome to the official website for our workshop at the [Applied Machine Learning Days Conference 2024](https://www.appliedmldays.org/)!
 
-This workshop is designed to guide you through the seamless integration of automated machine learning capabilities with your MySQL database system, leveraging the powerful MySQL HeatWave Cloud Service.
+This workshop is designed to guide you through the seamless integration of automated machine learning capabilities with your MySQL database system, leveraging the powerful MySQL HeatWave Service.
 
 
 ## Workshop Overview
