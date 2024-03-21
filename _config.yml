@@ -1,5 +1,3 @@
-# workshop-template https://github.com/evanwill/workshop-template
-# A Jekyll template for a simple workshop website, designed for github-pages,
 # based on Minima theme https://github.com/jekyll/minima
 
 # Notes: 
@@ -8,26 +6,26 @@
 # - use environment variable on build command to include analytics: JEKYLL_ENV=production jekyll build
 
 # site settings
-title: go-go gh-pages!
-description: "Learn about GitHub pages and Jekyll."
-keywords: "github, github-pages, websites, static gen, hosting, html, workshop, gh-pages"
+title: MySQL Heatwave Workshop!
+description: "Learn about MySQL Heatwave."
+keywords: "MySQL, Heatwave, Oracle, ML, ridha chahed"
 
 # author settings for cc-by
-author: evan will
+author: Ridha Chahed
 pub_year: 2018
-github_username: evanwill
+github_username: ridhachahed
 
 # add the full url for the github repository
-repo: "https://github.com/evanwill/go-go-ghpages"
+repo: "https://github.com/ridhachahed/heatwave-workshop-website"
 
 # urls
 # your gh-pages url: https://username.github.io
-url: https://evanwill.github.io
+url: https://ridhachahed.github.io
 # your repository name: /repository
-baseurl: /go-go-ghpages
+baseurl: /heatwave-workshop
 
 # analytics if desired (and use environment variable on build command)
-google_analytics: G-7N13F1ZJNR
+google_analytics:
 
 # defaults (to simplify front matter)
 defaults:
