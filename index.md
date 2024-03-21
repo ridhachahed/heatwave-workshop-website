@@ -3,7 +3,7 @@ title: Home
 ---
 
 <div align="center">
-    <img src="./images/workshop_logo.webp" width="500" alt="Workshop logo">
+    <img src="./images/logo_workshop.png" width="500" alt="Workshop logo">
 </div>
 
 # Automated Machine Learning from Your Database System with MySQL HeatWave Cloud Service

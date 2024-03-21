@@ -3,7 +3,7 @@ title: 2-Bastion
 nav: true
 ---
 
-# Setting Up the Bastion Host
+# Setting Up the Bastion Host and MySQL Shell
 
 Welcome to the second part of our workshop. This section is dedicated to setting up a Bastion Host, an essential component in managing secure access to your cloud resources. Follow the steps below to configure and utilize a Bastion Host effectively.
 
@@ -75,8 +75,51 @@ The file you are downloading is crucial for securely accessing the Bastion Host.
 
 After few seconds, you will be able to see that the Bastion Host instance has a **running** status. 
 
- ![](images/running_bastion.png)
+- Make sure to take of the **Public IP Address** as you will need it to connect to the host 
+
+![](images/bastion_running.png)
+
+
+### Step 3: Connect to the Bastion Host using the Cloud Shell
+
+To establish a connection with the bastion host, we'll utilize the cloud shell, which is a compact Linux terminal integrated into the OCI interface. You can access the cloud shell by clicking on the shell icon located adjacent to the OCI region name, at the top right corner of the page.
+
+![](images/cloud_shell.png)
+
+
+- Establish an SSH connection with the bastion host using its Public IP address by exectuing the following commands in your cloud shell :
+```
+chmod 600 <private-key-file-name>.key
+ssh -i <private-key-file-name>.key opc@<compute_instance_public_ip>
+```
+
+If prompted to accept the finger print, enter _**yes**_ and hit enter.
+
+![](images/bastion_connection.png)
+
+### Step 4: 
+
+If you install MySQL Shell on the bastion host, you can then use it to connect securely to your MySQL database server residing on a different machine in your private network. This setup is useful if you want to prevent direct exposure of your MySQL server to the internet and allow database connections only through the bastion.
+
+
+- You can now install MySQL Shell executing the following commands :
+
+```
+sudo yum install mysql-shell  
+```
+
+- Launch MySQL Shell executing the following command:
+```
+mysqlsh
+```
+When you see the MySQL Shell colorful prompt, exit with the following command:
+```
+\q
+```
+
+![](images/mysqlsh.png)
 
 
 ## Conclusion
-You have successfully successfully set up a compute instance to function as a bastion host, establishing it as the public gateway to the Virtual Cloud Network (VCN) we crafted earlier. You've securely stored the private key on your local machine, ensuring you're equipped to connect to this Compute Instance. With this foundational setup complete, we're now poised to move forward and initiate the deployment of the MySQL Database Service (MDS) with Heatwave in our upcoming lab!
+You have successfully set up a compute instance to function as a bastion host, establishing it as the public gateway to the Virtual Cloud Network (VCN) we crafted earlier. You have streamlined a direct connection to your Database System through
+the bastion node. We're now ready to move forward and initiate the deployment of the MySQL Database Service (MDS) with Heatwave in our upcoming lab!

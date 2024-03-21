@@ -1,5 +1,5 @@
 ---
-title: 4-MySQL
+title: 4-MySQL Heatwave
 nav: true
 ---
 
