@@ -1,107 +1,82 @@
 ---
-title: 2-Basic
+title: 2-Bastion
 nav: true
 ---
 
-# GitHub Pages Basics
+# Setting Up the Bastion Host
 
-Any GitHub repository can have a site by activating gh-pages in the settings and selecting a source branch.
-Additionally, each user and [organization](https://evanwill.github.io/_drafts/notes/github-org.html){:target="_blank" rel="noopener"} can have one root site by creating a repository called `username.github.io` (replace username with your actual username!).
-The site will automatically appear in the github.io domain following this pattern: 
+Welcome to the second part of our workshop. This section is dedicated to setting up a Bastion Host, an essential component in managing secure access to your cloud resources. Follow the steps below to configure and utilize a Bastion Host effectively.
 
-`https://username.github.io/repositoryname/`
 
-Let's look at the basic ways to use it!
+## Overview 
 
-# Static HTML
+A Bastion Host serves as a gateway to securely access your private cloud resources from an external network. It acts as a single entry point, reducing the potential attack surface and thereby enhancing your cloud environment's security. The Bastion Host is typically placed in a public subnet but is secured with stringent access rules.
 
-Any static web document can be served up from your repository. 
-If you add a `index.html` and activate gh-pages, you are ready to go! 
 
-Demo: 
+## Objectives 
 
-1. Create a new repository: 
-    - Click the + sign in the upper right and select *New repository*. 
-    - Give the repository a nice name
-    - Check the *Initialize this repository with a README* option
-    - Click the green *Create repository* button.
-2. Create a new `index.html` file:
-    - Click the *Create new file* button on the repository page.
-    - Name the file `index.html`.
-    - Write some HTML in the web editor! For example:
+- Understand the role and importance of a Bastion Host in a secure cloud architecture.
+- Learn how to configure a Bastion Host in your Virtual Cloud Network (VCN).
 
-      ```
-      <html>
-          <body>
-              <h1>Hello World!</h1>
-              <p>gh-pages rock!</p>
-          </body>
-      </html>
-      ```
-    - Scroll to the bottom, add a message, and click *Commit new file*. (You just used Git!)
-3. Activate gh-pages:
-    - Click on the repository's *Settings* tab.
-    - Scroll down to the *GitHub Pages* options.
-    - Click *Source*, select *Master branch*, and click *Save*. 
-    - Wait for a minute for gh-pages to build. The live link will appear in the options.
 
-> All Markdown files in the repo will also be rendered to HTML using the default GitHub theme.
-> If there is an `index.md` or `index.html` it will be served as the index page, otherwise `README.md` will be.
+## Prerequisites 
 
-# Automatic Theme Chooser
+- A functioning OCI environment with a configured VCN.
+- Necessary IAM permissions to create and manage compute instances.
 
-The Theme Chooser is a fully automated option to create a stock page for a repository using a Jekyll theme. 
-It converts [Markdown](https://daringfireball.net/projects/markdown/){:target="_blank" rel="noopener"} files into site pages using the selected theme layout (Markdown basics are on the [Reference page](5-reference.html)).
-This is a handy way to convert a README into a slightly more attractive project home page--in seconds!  
 
-Demo: 
+## Understanding Key Concepts
 
-1. Create a new repository:
-    - Click the + sign in the upper right and select *New repository*. 
-    - Give the repository a nice name, check the *Initialize this repository with a README* option, and click the *Create* button.
-2. Edit the `README.md` file:
-    - From the repository's main page, click on the `README.md` name to open the file's page.
-    - Click on the *Edit* (pencil icon) button at the top right of the file content.
-    - Edit the content in the web editor ([markdown tips](https://evanwill.github.io/_drafts/notes/markdown-minute.html){:target="_blank" rel="noopener"}). For example:
+Before we proceed with the configuration of the Bastion Host, it’s crucial to grasp some key concepts that underline its importance and functionality in securing cloud environments.
 
-      ```
-      # Hello World! 
+### What is a Bastion Host?
+**Definition**: A Bastion Host is a specialized server designed to provide secure access to private network resources from an external network, typically the internet. It acts as a 'jump server' or 'jump host', allowing secure SSH or RDP connections to be made to other internal resources.
 
-      This is a great new site.
-      p.s. gh-pages rock!
-      ```
-    - Scroll to the bottom, add a message, and click *Commit changes*. (You just did a `git commit -m "..."`!) 
-3. Activate gh-pages:
-    - Click on the repository's *Settings* tab.
-    - Scroll down to the *GitHub Pages* options.
-    - Click *Choose theme*.
-    - Click on the theme thumbnails to get a preview, then click the *Select* button. 
-    - Wait for a minute for gh-pages to build. The live link will appear in the options.
-    - A new file `_config.yml` will appear in your repo, this is a Jekyll file and is used to set the theme (you can ignore it when using Theme Chooser).
-4. Add an image:
-    - From the repository's main page, click *Upload files* button.
-    - Drag & drop a small image file, add a commit message, and click *Commit changes*.
-    - Edit the `README.md` file, adding the image to the Markdown like: `![alt text](filename.jpg)`. Also add a link to an About page, like: `[About](about.md)`. Commit changes!
-5. Add an About page:
-    - From the repository's main page, click the *Create new file* button.
-    - Name the file `about.md`.
-    - At the top of the file add YAML Front Matter (a sign to Jekyll to process the file). Add some content and a link back to the README. For example:
+**Purpose**: The primary role of the Bastion Host is to limit the exposure of internal resources to external threats, serving as a single, monitored, and controlled access point.
 
-      ```
-      ---
-      title: About
-      ---
 
-      # About this project
+## Step-by-Step Guide
 
-      In a word: **Awesome!**
 
-      See the [Home page](README.md)
-      ```
-    - Commit the changes, wait for a minute for the site to rebuild.
+### Step 1: Access the Instances Section
 
-> If you want to clean up after these tests, repositories can be deleted from the Settings tab.
-> Scroll way down to the bottom *Danger Zone* and click *Delete this repository*.
-> 
-> Another incredibly quick way to share content and documentation is to use the built in wiki feature of a GitHub repository. 
-> Just click the Wiki tab and start editing.
+- Once logged in, go to the main dashboard.
+- Navigate to the **Compute** section and select **"Instances"**.
+
+![](images/get_instance.png)
+
+
+### Step 2: Provisioning the Host
+
+- Click on **"Create Instance"**.
+
+- Navigate to the **Compute** section and select **"Instances"**.
+
+![](images/create_instance.png)
+
+- Set the name of the instance as **bastion**.
+
+![](images/name_bastion.png)
+
+- By scrolling down you check the Image and Shape details 
+- For the Networking information make sure that the VCN selected is the one we created in the previous step i.e.**"analytics_vcn"** with the **"public subnet-analytics_vcn"**.
+
+![](images/vcn_settings.png)
+
+- Scroll down to the Add SSH Key.
+- Click on the **"Save private key"** button provided. The private key should be a .key  file.
+
+The file you are downloading is crucial for securely accessing the Bastion Host. It acts as a cryptographic key that uniquely authenticates your SSH session. You will use the private key later on to connect your compute instance.
+
+
+- After downloading the private key, you initiate the Bastion Host provisioning by cliking on **"Create"**.
+
+![](images/key_save.png)
+
+After few seconds, you will be able to see that the Bastion Host instance has a **running** status. 
+
+ ![](images/running_bastion.png)
+
+
+## Conclusion
+You have successfully successfully set up a compute instance to function as a bastion host, establishing it as the public gateway to the Virtual Cloud Network (VCN) we crafted earlier. You've securely stored the private key on your local machine, ensuring you're equipped to connect to this Compute Instance. With this foundational setup complete, we're now poised to move forward and initiate the deployment of the MySQL Database Service (MDS) with Heatwave in our upcoming lab!
