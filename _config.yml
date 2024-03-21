@@ -6,7 +6,7 @@
 # - use environment variable on build command to include analytics: JEKYLL_ENV=production jekyll build
 
 # site settings
-title: MySQL Heatwave Workshop!
+title: MySQL Heatwave Workshop
 description: "Learn about MySQL Heatwave."
 keywords: "MySQL, Heatwave, Oracle, ML, ridha chahed"
 
