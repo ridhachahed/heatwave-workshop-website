@@ -3,7 +3,7 @@ title: Home
 ---
 
 <div> 
-    <img src="{{ '/images/workshop_logo.webp' | absolute_url }}" alt="github octocat" style="width:45%;" >
+    <img src="{{ '/images/workshop_logo.png' | absolute_url }}" alt="MySQL Heatwave" style="width:45%;" >
 </div>
 
 # Build a Website with Jekyll and GitHub Pages 
