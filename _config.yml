@@ -22,7 +22,7 @@ repo: "https://github.com/ridhachahed/heatwave-workshop-website"
 # your gh-pages url: https://username.github.io
 url: https://ridhachahed.github.io
 # your repository name: /repository
-baseurl: /heatwave-workshop
+baseurl: /heatwave-workshop-website
 
 # analytics if desired (and use environment variable on build command)
 google_analytics:
