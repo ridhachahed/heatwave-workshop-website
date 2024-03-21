@@ -9,7 +9,7 @@ title: Home
 # Automated Machine Learning from Your Database System with MySQL HeatWave Cloud Service
 
 
-Welcome to the official GitHub repository for our workshop at the [Applied Machine Learning Days Conference 2024](https://www.appliedmldays.org/)!
+Welcome to the official website for our workshop at the [Applied Machine Learning Days Conference 2024](https://www.appliedmldays.org/)!
 
 This workshop is designed to guide you through the seamless integration of automated machine learning capabilities with your MySQL database system, leveraging the powerful MySQL HeatWave Cloud Service.
 
