@@ -2,8 +2,8 @@
 title: Home
 ---
 
-<div> 
-    <img src="{{ '/images/workshop_logo.png' | absolute_url }}" alt="MySQL Heatwave" style="width:45%;" >
+<div align="center">
+    <img src="./images/workshop_logo.webp" width="500" alt="Workshop logo">
 </div>
 
 # Build a Website with Jekyll and GitHub Pages 
