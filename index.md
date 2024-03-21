@@ -6,21 +6,26 @@ title: Home
     <img src="./images/workshop_logo.webp" width="500" alt="Workshop logo">
 </div>
 
-# Build a Website with Jekyll and GitHub Pages 
+# Automated Machine Learning from Your Database System with MySQL HeatWave Cloud Service
 
-**This workshop is from 2017--please see [Go-Go GH-Pages V.2 (2020)](https://evanwill.github.io/go-go-ghpages-b/) updated content and video!**
 
-With [GitHub pages](https://pages.github.com/) and [Jekyll](https://jekyllrb.com/) you can quickly create and publish a website for free! 
-It is an ideal solution for creating a simple project or personal site to highlight your academic work. 
+Welcome to the official GitHub repository for our workshop at the [Applied Machine Learning Days Conference 2024](https://www.appliedmldays.org/)!
 
-This workshop will introduce the basics of using free hosting from GitHub Pages which is integrated with the popular static website generator Jekyll. 
-You will learn how to set up a project repository, write content in Markdown, and publish your site, all using GitHub's user friendly web interface. 
-Advanced usage of Jekyll for local web development is introduced final section.
+This workshop is designed to guide you through the seamless integration of automated machine learning capabilities with your MySQL database system, leveraging the powerful MySQL HeatWave Cloud Service.
 
-This workshop partners well with [Get Git](https://evanwill.github.io/get-git/){:target="_blank" rel="noopener"}, which is offered earlier in the semester. 
-Experience with HTML will be helpful, but not necessary.
 
-Watch [workshop screen cast from 2017](https://youtu.be/SWVjQsvQocA){:target="_blank" rel="noopener"} for full content.
+## Workshop Overview
+
+MySQL HeatWave is a fully managed service, developed and supported by the MySQL team at Oracle. This cloud service allows you to create and manage a MySQL DB System with a HeatWave Cluster to use with services on the cloud.
+
+MySQL HeatWave is the only fully managed database service that combines transactions, analytics, and machine learning services into one MySQL Database. It also includes MySQL HeatWave Lakehouse, which lets users query half a petabyte of data in object storage-in a variety of file formats, such as CSV, Parquet, and export files from other databases.
+
+We propose in this workshop, to display the capabilities of Heatwave via a step by step guide from storing unstructured data and loading it into the Database with Heatwave Lakehouse to applying Automated Machine Learning on that same data.
+We will guide the participants though a real case example and allow them to interact by themselves with the service. They will be able to create their database system, load some data and train their own Machine Learning models.
+The audience will learn about a range of fully automated machine learning capabilities to solve business problems such as forecasting demand, detecting fraudulent transactions, predicting upcoming maintenance needs, and recommending new products to their customers-all via an easy-to-use, performant, secure SQL/GUI interface.
+
+HeatWave AutoML includes everything users need to build, train, deploy, and explain machine learning models within MySQL HeatWave, at no additional cost. It automates the machine learning lifecycle, including algorithm selection, intelligent data sampling for model training, feature selection, and hyperparameter optimization-saving data analysts and data scientists significant time and effort. Aspects of the machine learning pipeline can be customized, including algorithm selection, feature selection, and hyperparameter optimization.
+
 
 <div class="toc" markdown="1">
 ## Contents:
@@ -30,10 +35,3 @@ Watch [workshop screen cast from 2017](https://youtu.be/SWVjQsvQocA){:target="_b
 {% endfor %}
 </div>
 
-Hosted at [University of Idaho Library](http://www.lib.uidaho.edu/){:target="_blank" rel="noopener"} April 2017, Oct 2018
-
-> built using [Jekyll](https://jekyllrb.com/), [GitHub Pages](https://pages.github.com/), and [workshop-template](https://github.com/evanwill/workshop-template).
->
-> licensed cc-by-sa <a href="https://github.com/evanwill">evan will</a> {{ site.pub_year }}. (get [source code]({{ site.repo }}))
-> 
-> <a href="http://creativecommons.org/licenses/by-sa/4.0/" rel="license"><img style="border-width: 0;" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" alt="Creative Commons License" /></a>
