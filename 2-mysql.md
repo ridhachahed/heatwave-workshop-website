@@ -74,4 +74,4 @@ This achievement marks a significant milestone in your journey toward leveraging
 
 The forthcoming step involves utilizing the Object Storage service to create a bucket. This bucket will provide you a secure and scalable solution for storing and managing the vast amounts of data that our MySQL HeatWave database and cluster will process and analyze.
 
-[Lab 3: Object Storage](object_storage.md)
+[Lab 3: Object Storage](3-object_storage.md)
