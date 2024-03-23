@@ -120,11 +120,12 @@ CALL sys.ML_SCORE('ml_data.bank_marketing', 'y', @model_bank, 'accuracy', @score
 -- Print the score
 SELECT @score_bank;
 ``` 
-![](images/select_table.png)
 
-![](images/model_catalog.png)
+![](images/select%20table.png)
 
-![](images/model_metadata.png)
+![](images/model%20catalog.png)
+
+![](images/model%20metadata.png)
 
 
 After training the model we are ready to use it to make some predictions.
