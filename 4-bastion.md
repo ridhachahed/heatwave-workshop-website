@@ -3,7 +3,7 @@ title: 4-Bastion
 nav: true
 ---
 
-# Setting Up the Bastion Host and MySQL Shell
+## Setting Up the Bastion Host and MySQL Shell
 
 Welcome to the second part of our workshop. This section is dedicated to setting up a Bastion Host, an essential component in managing secure access to your cloud resources. Follow the steps below to configure and utilize a Bastion Host effectively.
 
@@ -58,7 +58,18 @@ Before we proceed with the configuration of the Bastion Host, it’s crucial to 
 
 ![](images/name_bastion.png)
 
-- By scrolling down you check the Image and Shape details 
+- By scrolling down you check the Image and Shape details. We need to modify the shape of the instance as we need more memory to be able to install the packages we need. To do that, click on **Edit** in the Image and Shape.
+
+![](images/edit_shape.png)
+
+- On the new page, select **Change Shape**
+
+![](images/change_shape.png)
+
+- We now have the choice among several shape configurations. Let's select the small **VM.Standard.E2.1** which provides us a Virtual Mahcine with 1 CPU and 8GB of memory. You can validate your choice by clicking on **Select shape**
+
+![](images/select_shape.png)
+
 - For the Networking information make sure that the VCN selected is the one we created in the previous step i.e.**"analytics_vcn"** with the **"public subnet-analytics_vcn"**.
 
 ![](images/vcn_settings.png)
@@ -108,18 +119,17 @@ If you install MySQL Shell on the bastion host, you can then use it to connect s
 sudo yum install mysql-shell  
 ```
 
-- Launch MySQL Shell executing the following command:
+- Launch MySQL Shell executing the following command with your **admin_password** and your **mysql_private_ip_address**:
+
 ```
-mysqlsh
-```
-When you see the MySQL Shell colorful prompt, exit with the following command:
-```
-\q
+mysqlsh --user=admin --password=<admin_password> --host=<mysql_private_ip_address> --port=3306 --sql
 ```
 
 ![](images/mysqlsh.png)
 
 
 ## Conclusion
-You have successfully set up a compute instance to function as a bastion host, establishing it as the public gateway to the Virtual Cloud Network (VCN) we crafted earlier. You have streamlined a direct connection to your Database System through
-the bastion node. We're now ready to move forward and initiate the deployment of the MySQL Database Service (MDS) with Heatwave in our upcoming lab!
+You have successfully set up a compute instance to function as a bastion host, establishing it as the public gateway to the Virtual Cloud Network (VCN) we crafted earlier. You have streamlined a direct connection to your Database System through the bastion node. We're now ready to move forward and initiate the deployment of the MySQL Database Service (MDS) with Heatwave in our upcoming lab!
+
+[Lab 5: Machine Learning from your MySQL Database System](5-ml.md)
+
